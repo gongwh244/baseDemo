@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  twoViewController.h
 //  baseDemo
 //
 //  Created by gongweiqiang on 15-3-17.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "tabbarView.h"
 
-@interface ViewController : UIViewController<tabbarViewDelegate>
-
+@interface twoViewController : UIViewController
 
 @end
-
