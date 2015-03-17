@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface scrollViewController : UIViewController
+@protocol showImageDelegate <NSObject>
+
+- (void)enterHomeViewController;
+
+@end
+
+@interface scrollViewController : UIViewController<UIScrollViewDelegate>
+
+@property (nonatomic,assign) id<showImageDelegate>delegate;
 
 @end

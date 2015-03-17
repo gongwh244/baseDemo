@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zjb-K0-Q2G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zjb-K0-Q2G">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -157,25 +157,17 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-Sr-mmJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubC-gd-nAi">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <color key="backgroundColor" red="1" green="0.40382903279999999" blue="0.1018854256" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="ubC-gd-nAi" secondAttribute="centerY" id="0qa-xd-euu"/>
-                                    <constraint firstItem="ubC-gd-nAi" firstAttribute="top" secondItem="XIx-Sr-mmJ" secondAttribute="top" id="G0P-rl-C62"/>
-                                    <constraint firstAttribute="bottom" secondItem="ubC-gd-nAi" secondAttribute="bottom" id="Inc-2G-2B8"/>
-                                    <constraint firstAttribute="centerX" secondItem="ubC-gd-nAi" secondAttribute="centerX" id="L5H-b9-Mza"/>
-                                    <constraint firstAttribute="trailing" secondItem="ubC-gd-nAi" secondAttribute="trailing" multiplier="4" id="PCE-Oj-yyn"/>
-                                    <constraint firstItem="ubC-gd-nAi" firstAttribute="leading" secondItem="XIx-Sr-mmJ" secondAttribute="leading" id="sHk-c7-W92"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="2Lr-94-KIU" id="XT4-PJ-oW5"/>
+                                </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RfZ-4P-Et3">
                                 <rect key="frame" x="280" y="555" width="39" height="37"/>
                                 <color key="backgroundColor" red="1" green="0.40382903279999999" blue="0.1018854256" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="valueChange:" destination="2Lr-94-KIU" eventType="valueChanged" id="VVF-hH-6Q6"/>
+                                </connections>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,7 +181,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lengthConstrain" destination="PCE-Oj-yyn" id="dRP-ba-6pS"/>
                         <outlet property="pageControl" destination="RfZ-4P-Et3" id="L2v-e0-LEw"/>
                         <outlet property="scrollView" destination="XIx-Sr-mmJ" id="JpS-jr-lpg"/>
                     </connections>

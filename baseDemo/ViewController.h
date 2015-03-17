@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "tabbarView.h"
+#import "scrollViewController.h"
 
-@interface ViewController : UIViewController<tabbarViewDelegate>
+@interface ViewController : UIViewController<tabbarViewDelegate,showImageDelegate>
 
 
 @end

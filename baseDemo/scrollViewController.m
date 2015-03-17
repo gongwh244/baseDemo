@@ -6,29 +6,73 @@
 //  Copyright (c) 2015年 Holl. All rights reserved.
 //
 #define DEVICE_WIDTH                [UIScreen mainScreen].bounds.size.width
+#define DEVICE_HEIGHT               [UIScreen mainScreen].bounds.size.height
+
+#define IMAGE_NUM                   4
 
 #import "scrollViewController.h"
 
 @interface scrollViewController ()
+
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *lengthConstrain;
 
-
-@property (assign, nonatomic) CGFloat picNum;
 @end
 
 @implementation scrollViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _picNum = 4.0f;
     
-//    _lengthConstrain.constant = DEVICE_WIDTH * (_picNum - 1);
-////    [self.view layoutIfNeeded];
-
+    [self loadImageView];
+    [self layPageControl];
 }
+
+- (void)loadImageView
+{
+    _scrollView.delegate = self;
+    _scrollView.contentSize = CGSizeMake(IMAGE_NUM * DEVICE_WIDTH, DEVICE_HEIGHT);
+    
+    for (int i = 0; i < IMAGE_NUM; i++) {
+        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(i * DEVICE_WIDTH, 0, DEVICE_WIDTH, DEVICE_HEIGHT)];
+        image.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",i]];
+        [_scrollView addSubview:image];
+        if (i == IMAGE_NUM - 1) {
+            UIButton *btn = [[UIButton alloc] init];
+            btn.backgroundColor = [UIColor redColor];
+            btn.center = image.center;
+            btn.bounds = CGRectMake(0, 0, 80, 40);
+            [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+            [_scrollView addSubview:btn];
+        }
+    }
+}
+- (IBAction)valueChange:(id)sender {
+    
+    UIPageControl *control = (UIPageControl *)sender;
+    [_scrollView setContentOffset:CGPointMake(control.currentPage * DEVICE_WIDTH, 0) animated:YES];
+}
+
+- (void)btnClick
+{
+    if (_delegate && [_delegate respondsToSelector:@selector(enterHomeViewController)]) {
+        [_delegate enterHomeViewController];
+    }
+}
+
+- (void)layPageControl
+{
+    _pageControl.numberOfPages = 4;
+    _pageControl.backgroundColor = [UIColor clearColor];
+    _pageControl.pageIndicatorTintColor = [UIColor blueColor];
+    _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    _pageControl.currentPage = scrollView.contentOffset.x / DEVICE_WIDTH;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

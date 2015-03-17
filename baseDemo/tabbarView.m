@@ -29,6 +29,7 @@
         [_btnOne setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         [_btnTwo setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         [_btnThree setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        _btnOne.selected = YES;
     }
     return self;
 }
@@ -73,7 +74,5 @@
             break;
     }
 }
-
-
 
 @end
