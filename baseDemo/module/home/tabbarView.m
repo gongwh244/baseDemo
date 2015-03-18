@@ -24,28 +24,24 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _btnOne = (UIButton *)[self viewWithTag:10];
-        _btnTwo = (UIButton *)[self viewWithTag:11];
-        _btnThree = (UIButton *)[self viewWithTag:12];
-        [_btnOne addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_btnTwo addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_btnThree addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         
-        _labelOne = (UILabel *)[self viewWithTag:100];
-        _labelTwo = (UILabel *)[self viewWithTag:101];
-        _labelThree = (UILabel *)[self viewWithTag:102];
-        
-        [_btnOne setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        [_btnTwo setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        [_btnThree setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        _btnOne.selected = YES;
-        _labelOne.textColor = [UIColor redColor];
-        
-        [_btnOne setImage:[UIImage imageNamed:@"home_f"] forState:UIControlStateSelected];
-        [_btnTwo setImage:[UIImage imageNamed:@"home_f"] forState:UIControlStateSelected];
-        [_btnThree setImage:[UIImage imageNamed:@"home_f"] forState:UIControlStateSelected];
     }
     return self;
+}
+
+- (void)reloadData
+{
+    for (int i = 0; i < 3; i++) {
+        UIView *itemView = [[UIView alloc] initWithFrame:CGRectZero];
+        itemView.backgroundColor = [UIColor yellowColor];
+        [self addSubview:itemView];
+        itemView.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0f constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
+    }
 }
 
 - (void)btnAction:(UIButton *)sender

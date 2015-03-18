@@ -7,15 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+@class tabbarView;
 
 @protocol tabbarViewDelegate <NSObject>
 
-- (void)buttonClick:(NSInteger)index;
+@required
+
+- (NSInteger)tabbarViewNumOfItem:(tabbarView *)tabbar;
+- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index;
+
+@optional
+- (void)tabbarViewAction:(tabbarView *)tabbar clickIndex:(NSInteger)index;
 
 @end
 
 @interface tabbarView : UIView
 
 @property (nonatomic,assign) id <tabbarViewDelegate>delegate;
+
+- (void)reloadData;
 
 @end
