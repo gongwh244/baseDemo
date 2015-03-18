@@ -34,7 +34,6 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:scrollVC.view attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0f constant:0.0f]];
     [self updateViewConstraints];
     
-    
     _tabView.delegate = self;
     _childArray = [[NSMutableArray alloc] init];
     UIViewController *oneVC = [story instantiateViewControllerWithIdentifier:@"one"];
@@ -43,7 +42,6 @@
     [_childArray addObject:oneVC];
     [_childArray addObject:twoVC];
     [_childArray addObject:threeVC];
-    
     [self buttonClick:0];
 }
 

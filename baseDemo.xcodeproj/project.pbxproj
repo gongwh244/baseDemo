@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		248B79631AB9552B008BEE92 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79581AB9552B008BEE92 /* oneViewController.m */; };
-		248B79641AB9552B008BEE92 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B795A1AB9552B008BEE92 /* scrollViewController.m */; };
-		248B79651AB9552B008BEE92 /* tabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B795C1AB9552B008BEE92 /* tabbarView.m */; };
-		248B79661AB9552B008BEE92 /* threeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B795E1AB9552B008BEE92 /* threeViewController.m */; };
-		248B79671AB9552B008BEE92 /* twoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79601AB9552B008BEE92 /* twoViewController.m */; };
-		248B79681AB9552B008BEE92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79621AB9552B008BEE92 /* ViewController.m */; };
+		248B796D1AB95AEF008BEE92 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B796C1AB95AEF008BEE92 /* scrollViewController.m */; };
+		248B79721AB95B0C008BEE92 /* tabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B796F1AB95B0C008BEE92 /* tabbarView.m */; };
+		248B79731AB95B0D008BEE92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79711AB95B0C008BEE92 /* ViewController.m */; };
+		248B797D1AB95B69008BEE92 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79761AB95B69008BEE92 /* oneViewController.m */; };
+		248B797E1AB95B69008BEE92 /* threeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79791AB95B69008BEE92 /* threeViewController.m */; };
+		248B797F1AB95B69008BEE92 /* twoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B797C1AB95B69008BEE92 /* twoViewController.m */; };
 		24A20F651AB7FAFA00DF1D6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A20F641AB7FAFA00DF1D6B /* main.m */; };
 		24A20F681AB7FAFA00DF1D6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A20F671AB7FAFA00DF1D6B /* AppDelegate.m */; };
 		24A20F711AB7FAFA00DF1D6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A20F6F1AB7FAFA00DF1D6B /* Main.storyboard */; };
@@ -36,18 +36,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		248B79571AB9552B008BEE92 /* oneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneViewController.h; sourceTree = "<group>"; };
-		248B79581AB9552B008BEE92 /* oneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneViewController.m; sourceTree = "<group>"; };
-		248B79591AB9552B008BEE92 /* scrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollViewController.h; sourceTree = "<group>"; };
-		248B795A1AB9552B008BEE92 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
-		248B795B1AB9552B008BEE92 /* tabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabbarView.h; sourceTree = "<group>"; };
-		248B795C1AB9552B008BEE92 /* tabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabbarView.m; sourceTree = "<group>"; };
-		248B795D1AB9552B008BEE92 /* threeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threeViewController.h; sourceTree = "<group>"; };
-		248B795E1AB9552B008BEE92 /* threeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threeViewController.m; sourceTree = "<group>"; };
-		248B795F1AB9552B008BEE92 /* twoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoViewController.h; sourceTree = "<group>"; };
-		248B79601AB9552B008BEE92 /* twoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoViewController.m; sourceTree = "<group>"; };
-		248B79611AB9552B008BEE92 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		248B79621AB9552B008BEE92 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		248B796B1AB95AEF008BEE92 /* scrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollViewController.h; sourceTree = "<group>"; };
+		248B796C1AB95AEF008BEE92 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
+		248B796E1AB95B0C008BEE92 /* tabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabbarView.h; sourceTree = "<group>"; };
+		248B796F1AB95B0C008BEE92 /* tabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabbarView.m; sourceTree = "<group>"; };
+		248B79701AB95B0C008BEE92 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		248B79711AB95B0C008BEE92 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		248B79751AB95B69008BEE92 /* oneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneViewController.h; sourceTree = "<group>"; };
+		248B79761AB95B69008BEE92 /* oneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneViewController.m; sourceTree = "<group>"; };
+		248B79781AB95B69008BEE92 /* threeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threeViewController.h; sourceTree = "<group>"; };
+		248B79791AB95B69008BEE92 /* threeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threeViewController.m; sourceTree = "<group>"; };
+		248B797B1AB95B69008BEE92 /* twoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoViewController.h; sourceTree = "<group>"; };
+		248B797C1AB95B69008BEE92 /* twoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoViewController.m; sourceTree = "<group>"; };
 		24A20F5F1AB7FAFA00DF1D6B /* baseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A20F631AB7FAFA00DF1D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A20F641AB7FAFA00DF1D6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,21 +86,61 @@
 		248B79561AB95475008BEE92 /* module */ = {
 			isa = PBXGroup;
 			children = (
-				24A20F6F1AB7FAFA00DF1D6B /* Main.storyboard */,
-				248B79571AB9552B008BEE92 /* oneViewController.h */,
-				248B79581AB9552B008BEE92 /* oneViewController.m */,
-				248B79591AB9552B008BEE92 /* scrollViewController.h */,
-				248B795A1AB9552B008BEE92 /* scrollViewController.m */,
-				248B795B1AB9552B008BEE92 /* tabbarView.h */,
-				248B795C1AB9552B008BEE92 /* tabbarView.m */,
-				248B795D1AB9552B008BEE92 /* threeViewController.h */,
-				248B795E1AB9552B008BEE92 /* threeViewController.m */,
-				248B795F1AB9552B008BEE92 /* twoViewController.h */,
-				248B79601AB9552B008BEE92 /* twoViewController.m */,
-				248B79611AB9552B008BEE92 /* ViewController.h */,
-				248B79621AB9552B008BEE92 /* ViewController.m */,
+				248B79741AB95B69008BEE92 /* one */,
+				248B79771AB95B69008BEE92 /* three */,
+				248B797A1AB95B69008BEE92 /* two */,
+				248B796A1AB95AEF008BEE92 /* show */,
+				248B79691AB95A44008BEE92 /* home */,
 			);
 			path = module;
+			sourceTree = "<group>";
+		};
+		248B79691AB95A44008BEE92 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				24A20F6F1AB7FAFA00DF1D6B /* Main.storyboard */,
+				248B796E1AB95B0C008BEE92 /* tabbarView.h */,
+				248B796F1AB95B0C008BEE92 /* tabbarView.m */,
+				248B79701AB95B0C008BEE92 /* ViewController.h */,
+				248B79711AB95B0C008BEE92 /* ViewController.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		248B796A1AB95AEF008BEE92 /* show */ = {
+			isa = PBXGroup;
+			children = (
+				248B796B1AB95AEF008BEE92 /* scrollViewController.h */,
+				248B796C1AB95AEF008BEE92 /* scrollViewController.m */,
+			);
+			path = show;
+			sourceTree = "<group>";
+		};
+		248B79741AB95B69008BEE92 /* one */ = {
+			isa = PBXGroup;
+			children = (
+				248B79751AB95B69008BEE92 /* oneViewController.h */,
+				248B79761AB95B69008BEE92 /* oneViewController.m */,
+			);
+			path = one;
+			sourceTree = "<group>";
+		};
+		248B79771AB95B69008BEE92 /* three */ = {
+			isa = PBXGroup;
+			children = (
+				248B79781AB95B69008BEE92 /* threeViewController.h */,
+				248B79791AB95B69008BEE92 /* threeViewController.m */,
+			);
+			path = three;
+			sourceTree = "<group>";
+		};
+		248B797A1AB95B69008BEE92 /* two */ = {
+			isa = PBXGroup;
+			children = (
+				248B797B1AB95B69008BEE92 /* twoViewController.h */,
+				248B797C1AB95B69008BEE92 /* twoViewController.m */,
+			);
+			path = two;
 			sourceTree = "<group>";
 		};
 		24A20F561AB7FAF900DF1D6B = {
@@ -276,14 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248B79681AB9552B008BEE92 /* ViewController.m in Sources */,
 				24A20F681AB7FAFA00DF1D6B /* AppDelegate.m in Sources */,
+				248B796D1AB95AEF008BEE92 /* scrollViewController.m in Sources */,
+				248B797E1AB95B69008BEE92 /* threeViewController.m in Sources */,
+				248B79731AB95B0D008BEE92 /* ViewController.m in Sources */,
 				24A20F651AB7FAFA00DF1D6B /* main.m in Sources */,
-				248B79661AB9552B008BEE92 /* threeViewController.m in Sources */,
-				248B79631AB9552B008BEE92 /* oneViewController.m in Sources */,
-				248B79651AB9552B008BEE92 /* tabbarView.m in Sources */,
-				248B79641AB9552B008BEE92 /* scrollViewController.m in Sources */,
-				248B79671AB9552B008BEE92 /* twoViewController.m in Sources */,
+				248B79721AB95B0C008BEE92 /* tabbarView.m in Sources */,
+				248B797D1AB95B69008BEE92 /* oneViewController.m in Sources */,
+				248B797F1AB95B69008BEE92 /* twoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +352,7 @@
 				24A20F701AB7FAFA00DF1D6B /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		24A20F741AB7FAFA00DF1D6B /* LaunchScreen.xib */ = {
