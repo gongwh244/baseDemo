@@ -19,6 +19,10 @@
 		248B79881AB96646008BEE92 /* two.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79861AB96646008BEE92 /* two.storyboard */; };
 		248B798A1AB9668D008BEE92 /* three.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79891AB9668D008BEE92 /* three.storyboard */; };
 		248B798B1AB9668D008BEE92 /* three.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79891AB9668D008BEE92 /* three.storyboard */; };
+		248B798E1AB97CCE008BEE92 /* home_f@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248B798C1AB97CCE008BEE92 /* home_f@2x.png */; };
+		248B798F1AB97CCE008BEE92 /* home_f@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248B798C1AB97CCE008BEE92 /* home_f@2x.png */; };
+		248B79901AB97CCE008BEE92 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248B798D1AB97CCE008BEE92 /* home@2x.png */; };
+		248B79911AB97CCE008BEE92 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 248B798D1AB97CCE008BEE92 /* home@2x.png */; };
 		24A20F651AB7FAFA00DF1D6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A20F641AB7FAFA00DF1D6B /* main.m */; };
 		24A20F681AB7FAFA00DF1D6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A20F671AB7FAFA00DF1D6B /* AppDelegate.m */; };
 		24A20F711AB7FAFA00DF1D6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A20F6F1AB7FAFA00DF1D6B /* Main.storyboard */; };
@@ -57,6 +61,8 @@
 		248B79831AB96426008BEE92 /* one.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = one.storyboard; sourceTree = "<group>"; };
 		248B79861AB96646008BEE92 /* two.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = two.storyboard; sourceTree = "<group>"; };
 		248B79891AB9668D008BEE92 /* three.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = three.storyboard; sourceTree = "<group>"; };
+		248B798C1AB97CCE008BEE92 /* home_f@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_f@2x.png"; sourceTree = "<group>"; };
+		248B798D1AB97CCE008BEE92 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		24A20F5F1AB7FAFA00DF1D6B /* baseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A20F631AB7FAFA00DF1D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A20F641AB7FAFA00DF1D6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 		24A20F971AB81E8500DF1D6B /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				248B798C1AB97CCE008BEE92 /* home_f@2x.png */,
+				248B798D1AB97CCE008BEE92 /* home@2x.png */,
 				24DF14361AB8552D0040AA8C /* 0.jpg */,
 				24DF14371AB8552D0040AA8C /* 1.jpg */,
 				24DF14381AB8552D0040AA8C /* 2.jpg */,
@@ -309,8 +317,10 @@
 				24A20F711AB7FAFA00DF1D6B /* Main.storyboard in Resources */,
 				24A20F761AB7FAFA00DF1D6B /* LaunchScreen.xib in Resources */,
 				24A20F731AB7FAFA00DF1D6B /* Images.xcassets in Resources */,
+				248B79901AB97CCE008BEE92 /* home@2x.png in Resources */,
 				248B798A1AB9668D008BEE92 /* three.storyboard in Resources */,
 				24DF143D1AB8552D0040AA8C /* 3.jpg in Resources */,
+				248B798E1AB97CCE008BEE92 /* home_f@2x.png in Resources */,
 				24DF143B1AB8552D0040AA8C /* 1.jpg in Resources */,
 				248B79841AB96426008BEE92 /* one.storyboard in Resources */,
 				248B79871AB96646008BEE92 /* two.storyboard in Resources */,
@@ -321,6 +331,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248B79911AB97CCE008BEE92 /* home@2x.png in Resources */,
+				248B798F1AB97CCE008BEE92 /* home_f@2x.png in Resources */,
 				248B798B1AB9668D008BEE92 /* three.storyboard in Resources */,
 				248B79851AB96426008BEE92 /* one.storyboard in Resources */,
 				248B79881AB96646008BEE92 /* two.storyboard in Resources */,

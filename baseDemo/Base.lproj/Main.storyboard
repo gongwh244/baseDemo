@@ -20,36 +20,63 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VG8-0E-Qld" userLabel="tabView" customClass="tabbarView">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-Wk-o80">
-                                        <rect key="frame" x="77" y="10" width="46" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首页" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOZ-8K-ar3">
+                                        <rect key="frame" x="79" y="30" width="42" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="jII-A5-73Z"/>
+                                            <constraint firstAttribute="width" constant="42" id="2z2-Zm-YQH"/>
+                                            <constraint firstAttribute="height" constant="21" id="CaD-QA-u4R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMd-Jq-aXd">
+                                        <rect key="frame" x="279" y="30" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="4QU-Qf-Zlw"/>
+                                            <constraint firstAttribute="height" constant="21" id="qoj-15-d8j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-aO-1ID">
+                                        <rect key="frame" x="479" y="30" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="hH6-CS-OfB"/>
+                                            <constraint firstAttribute="width" constant="42" id="hja-Zz-T7B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-Wk-o80">
+                                        <rect key="frame" x="77" y="0.0" width="46" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jII-A5-73Z"/>
                                             <constraint firstAttribute="width" constant="46" id="ubN-59-2dl"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" image="home.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ng-mn-cgh">
-                                        <rect key="frame" x="277" y="10" width="46" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="277" y="0.0" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="HAZ-D0-ibQ"/>
                                             <constraint firstAttribute="height" constant="30" id="QDm-rm-UGc"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" image="home.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqZ-j8-Uqk">
-                                        <rect key="frame" x="477" y="10" width="46" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="477" y="0.0" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="7IJ-7x-hP3"/>
                                             <constraint firstAttribute="height" constant="30" id="uPB-oq-emM"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" image="home.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -59,10 +86,16 @@
                                     <constraint firstAttribute="centerX" secondItem="5ng-mn-cgh" secondAttribute="centerX" id="0Gz-s3-CgA"/>
                                     <constraint firstAttribute="centerX" secondItem="Qby-Wk-o80" secondAttribute="centerX" multiplier="3" id="26o-Hi-gOK"/>
                                     <constraint firstAttribute="height" constant="50" id="3xe-6J-cS2"/>
-                                    <constraint firstAttribute="centerY" secondItem="LqZ-j8-Uqk" secondAttribute="centerY" id="DbQ-Zy-a7A"/>
-                                    <constraint firstAttribute="centerY" secondItem="5ng-mn-cgh" secondAttribute="centerY" id="EGp-0T-znd"/>
+                                    <constraint firstAttribute="centerX" secondItem="2vE-aO-1ID" secondAttribute="centerX" multiplier="3/5" id="OOA-wd-IHj"/>
+                                    <constraint firstAttribute="centerX" secondItem="DOZ-8K-ar3" secondAttribute="centerX" multiplier="3" id="P6b-ke-dge"/>
                                     <constraint firstAttribute="centerX" secondItem="LqZ-j8-Uqk" secondAttribute="centerX" multiplier="3/5" id="SlP-Zy-Va7"/>
-                                    <constraint firstAttribute="centerY" secondItem="Qby-Wk-o80" secondAttribute="centerY" id="tW5-Ur-fpg"/>
+                                    <constraint firstItem="5ng-mn-cgh" firstAttribute="top" secondItem="VG8-0E-Qld" secondAttribute="top" id="VKg-FU-fO0"/>
+                                    <constraint firstItem="rMd-Jq-aXd" firstAttribute="top" secondItem="5ng-mn-cgh" secondAttribute="bottom" id="aTj-sc-V1x"/>
+                                    <constraint firstItem="DOZ-8K-ar3" firstAttribute="top" secondItem="VG8-0E-Qld" secondAttribute="top" constant="30" id="bQU-Ex-cjn"/>
+                                    <constraint firstItem="Qby-Wk-o80" firstAttribute="top" secondItem="VG8-0E-Qld" secondAttribute="top" id="fEs-t4-yvQ"/>
+                                    <constraint firstItem="2vE-aO-1ID" firstAttribute="top" secondItem="LqZ-j8-Uqk" secondAttribute="bottom" id="imE-ww-rsc"/>
+                                    <constraint firstItem="LqZ-j8-Uqk" firstAttribute="top" secondItem="VG8-0E-Qld" secondAttribute="top" id="jv9-HC-e6A"/>
+                                    <constraint firstAttribute="centerX" secondItem="rMd-Jq-aXd" secondAttribute="centerX" id="zwF-WT-GW2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPR-LN-3Ev">
@@ -155,4 +188,7 @@
             <point key="canvasLocation" x="495" y="1109"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home.png" width="24" height="24"/>
+    </resources>
 </document>
