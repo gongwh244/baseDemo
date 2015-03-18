@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self loadImageView];
     [self layPageControl];
 }
@@ -72,7 +71,6 @@
 {
     _pageControl.currentPage = scrollView.contentOffset.x / DEVICE_WIDTH;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
