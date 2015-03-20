@@ -14,7 +14,7 @@
 @required
 
 - (NSInteger)tabbarViewNumOfItem:(tabbarView *)tabbar;
-//- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index;
+- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index;
 
 @optional
 - (void)tabbarViewAction:(tabbarView *)tabbar clickIndex:(NSInteger)index;

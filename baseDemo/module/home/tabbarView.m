@@ -40,6 +40,7 @@
     for (int i = 0; i < _indexNum; i++) {
         UIView *itemView = [[UIView alloc] initWithFrame:CGRectZero];
         itemView.backgroundColor = [UIColor yellowColor];
+        itemView.tag = i + 1000;
         [self addSubview:itemView];
         itemView.translatesAutoresizingMaskIntoConstraints = NO;
         
@@ -48,61 +49,19 @@
         [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * i/_indexNum constant:0.0f]];
         [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * (i + 1)/_indexNum constant:0.0f]];
         [self updateConstraints];
+        
+        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureAction:)];
+        [itemView addGestureRecognizer:tapGR];
     }
 }
 
-- (void)btnAction:(UIButton *)sender
+- (void)gestureAction:(UITapGestureRecognizer *)sender
 {
-    switch (sender.tag) {
-        case 10://one
-        {
-            NSLog(@"one click");
-            _btnOne.selected = YES;
-            _btnTwo.selected = NO;
-            _btnThree.selected = NO;
-            
-            _labelOne.textColor = [UIColor redColor];
-            _labelTwo.textColor = [UIColor blackColor];
-            _labelThree.textColor = [UIColor blackColor];
-            
-            //if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
-                //[_delegate buttonClick:0];
-            //}
-        }
-            break;
-        case 11://two
-        {
-            NSLog(@"two click");
-            _btnOne.selected = NO;
-            _btnTwo.selected = YES;
-            _btnThree.selected = NO;
-            
-            _labelOne.textColor = [UIColor blackColor];
-            _labelTwo.textColor = [UIColor redColor];
-            _labelThree.textColor = [UIColor blackColor];
-            
-            //if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
-            //    [_delegate buttonClick:1];
-            //}
-        }
-            break;
-        default://three
-        {
-            NSLog(@"three click");
-            _btnOne.selected = NO;
-            _btnTwo.selected = NO;
-            _btnThree.selected = YES;
-            
-            _labelOne.textColor = [UIColor blackColor];
-            _labelTwo.textColor = [UIColor blackColor];
-            _labelThree.textColor = [UIColor redColor];
-            
-            //if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
-            //    [_delegate buttonClick:2];
-            //}
-        }
-            break;
+    NSLog(@"press %ld",sender.view.tag);
+    if (_delegate && [_delegate respondsToSelector:@selector(tabbarViewAction:clickIndex:)]) {
+        [_delegate tabbarViewAction:self clickIndex:(sender.view.tag - 1000)];
     }
 }
+
 
 @end

@@ -46,6 +46,11 @@
     [self buttonClick:0];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)enterHomeViewController
 {
     for (UIViewController *vc in self.childViewControllers) {
@@ -61,16 +66,6 @@
     }
 }
 
-- (NSInteger)tabbarViewNumOfItem:(tabbarView *)tabbar
-{
-    return 3;
-}
-
-//- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index
-//{
-//    
-//}
-
 - (void)buttonClick:(NSInteger)index
 {
     UIViewController *vc = _childArray[index];
@@ -84,9 +79,16 @@
     [self updateViewConstraints];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - delegate
+
+- (NSInteger)tabbarViewNumOfItem:(tabbarView *)tabbar
+{
+    return 3;
+}
+
+- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index
+{
+    
 }
 
 @end
