@@ -19,6 +19,9 @@
 @end
 
 @implementation tabbarView
+{
+    NSInteger _indexNum;
+}
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -31,7 +34,10 @@
 
 - (void)reloadData
 {
-    for (int i = 0; i < 3; i++) {
+    if (_delegate && [_delegate respondsToSelector:@selector(tabbarViewNumOfItem:)]) {
+        _indexNum = [_delegate tabbarViewNumOfItem:self];
+    }
+    for (int i = 0; i < _indexNum; i++) {
         UIView *itemView = [[UIView alloc] initWithFrame:CGRectZero];
         itemView.backgroundColor = [UIColor yellowColor];
         [self addSubview:itemView];
@@ -39,8 +45,9 @@
         
         [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
         [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0f constant:0.0f]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * i/_indexNum constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * (i + 1)/_indexNum constant:0.0f]];
+        [self updateConstraints];
     }
 }
 
@@ -58,9 +65,9 @@
             _labelTwo.textColor = [UIColor blackColor];
             _labelThree.textColor = [UIColor blackColor];
             
-            if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
-                [_delegate buttonClick:0];
-            }
+            //if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
+                //[_delegate buttonClick:0];
+            //}
         }
             break;
         case 11://two
@@ -74,9 +81,9 @@
             _labelTwo.textColor = [UIColor redColor];
             _labelThree.textColor = [UIColor blackColor];
             
-            if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
-                [_delegate buttonClick:1];
-            }
+            //if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
+            //    [_delegate buttonClick:1];
+            //}
         }
             break;
         default://three
@@ -90,9 +97,9 @@
             _labelTwo.textColor = [UIColor blackColor];
             _labelThree.textColor = [UIColor redColor];
             
-            if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
-                [_delegate buttonClick:2];
-            }
+            //if (_delegate && [_delegate respondsToSelector:@selector(buttonClick:)]) {
+            //    [_delegate buttonClick:2];
+            //}
         }
             break;
     }

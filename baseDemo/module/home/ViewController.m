@@ -34,6 +34,7 @@
     [self updateViewConstraints];
     
     _tabView.delegate = self;
+    [_tabView reloadData];
     
     _childArray = [[NSMutableArray alloc] init];
     _nameArray = [[NSMutableArray alloc] initWithObjects:@"one",@"two",@"three", nil];
@@ -59,6 +60,16 @@
         }
     }
 }
+
+- (NSInteger)tabbarViewNumOfItem:(tabbarView *)tabbar
+{
+    return 3;
+}
+
+//- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index
+//{
+//    
+//}
 
 - (void)buttonClick:(NSInteger)index
 {
