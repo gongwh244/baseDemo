@@ -86,9 +86,31 @@
     return 3;
 }
 
-- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index
+- (void)tabbarViewItem:(UIView *)tabItem index:(NSInteger)index
 {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",index]];
+    [tabItem addSubview:imageView];
     
+    imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:tabItem attribute:NSLayoutAttributeTop multiplier:1.0 constant:0]];
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:tabItem attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:44]];
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:imageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:44]];
+    [tabItem updateConstraints];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.text = [NSString stringWithFormat:@"%ld0000",index];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont systemFontOfSize:15];
+    titleLabel.textColor = [UIColor redColor];
+    [tabItem addSubview:titleLabel];
+    titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabItem attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:tabItem attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:44]];
+    [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:15]];
+    [tabItem updateConstraints];
 }
 
 @end

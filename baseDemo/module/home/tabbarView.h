@@ -14,7 +14,7 @@
 @required
 
 - (NSInteger)tabbarViewNumOfItem:(tabbarView *)tabbar;
-- (UIView *)tabbarViewItem:(tabbarView *)tabbar index:(NSInteger)index;
+- (void)tabbarViewItem:(UIView *)tabItem index:(NSInteger)index;
 
 @optional
 - (void)tabbarViewAction:(tabbarView *)tabbar clickIndex:(NSInteger)index;
@@ -24,6 +24,8 @@
 @interface tabbarView : UIView
 
 @property (nonatomic,assign) id <tabbarViewDelegate>delegate;
+
+@property (nonatomic,assign) NSInteger count;
 
 - (void)reloadData;
 

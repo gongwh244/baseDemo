@@ -20,7 +20,7 @@
 
 @implementation tabbarView
 {
-    NSInteger _indexNum;
+    
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -35,21 +35,24 @@
 - (void)reloadData
 {
     if (_delegate && [_delegate respondsToSelector:@selector(tabbarViewNumOfItem:)]) {
-        _indexNum = [_delegate tabbarViewNumOfItem:self];
+        _count = [_delegate tabbarViewNumOfItem:self];
     }
-    for (int i = 0; i < _indexNum; i++) {
+    for (int i = 0; i < _count; i++) {
         UIView *itemView = [[UIView alloc] initWithFrame:CGRectZero];
-        itemView.backgroundColor = [UIColor yellowColor];
+        itemView.backgroundColor = [UIColor whiteColor];
         itemView.tag = i + 1000;
         [self addSubview:itemView];
         itemView.translatesAutoresizingMaskIntoConstraints = NO;
         
         [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f]];
         [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0f constant:0.0f]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * i/_indexNum constant:0.0f]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * (i + 1)/_indexNum constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * i/_count constant:0.0f]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:itemView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1.0f * (i + 1)/_count constant:0.0f]];
         [self updateConstraints];
         
+        if (_delegate && [_delegate respondsToSelector:@selector(tabbarViewItem:index:)]) {
+            [_delegate tabbarViewItem:itemView index:i];
+        }
         UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureAction:)];
         [itemView addGestureRecognizer:tapGR];
     }
