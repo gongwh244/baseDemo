@@ -7,8 +7,9 @@
 //
 
 #import "threeViewController.h"
-
+#import "MJRefresh.h"
 @interface threeViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
@@ -17,6 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _myTableView.tableFooterView = [[UIView alloc] init];
+    
+    __weak UITableView *tableView = _myTableView;
+    [_myTableView addHeaderWithCallback:^{
+        NSLog(@"header refresh");
+        [tableView headerEndRefreshing];
+    }];
+    [_myTableView addFooterWithCallback:^{
+        NSLog(@"footer refresh");
+        [tableView footerEndRefreshing];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -32,6 +44,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    return cell;
 }
 
 /*

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface threeViewController : UIViewController
+@interface threeViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end
