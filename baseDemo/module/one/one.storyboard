@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -26,18 +26,77 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AA0-ZT-yit">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="yxx-jD-fjb"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="首页" id="daA-HJ-y8M">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="ed9-yP-Xbg">
+                                            <connections>
+                                                <segue destination="pgt-au-YCt" kind="push" id="g5G-6i-5S4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TXc-0U-Ow4" secondAttribute="trailing" id="LhL-pE-H7u"/>
+                            <constraint firstItem="AA0-ZT-yit" firstAttribute="top" secondItem="AeF-GI-5F6" secondAttribute="top" id="Nvl-0G-dmR"/>
                             <constraint firstItem="hRB-E8-yz7" firstAttribute="top" secondItem="TXc-0U-Ow4" secondAttribute="bottom" id="TPp-gH-p4c"/>
+                            <constraint firstAttribute="trailing" secondItem="AA0-ZT-yit" secondAttribute="trailing" id="ZrB-Yp-Vrl"/>
                             <constraint firstItem="TXc-0U-Ow4" firstAttribute="leading" secondItem="AeF-GI-5F6" secondAttribute="leading" id="fXH-xU-1G9"/>
+                            <constraint firstItem="AA0-ZT-yit" firstAttribute="leading" secondItem="AeF-GI-5F6" secondAttribute="leading" id="jLe-7K-eeg"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ph6-Td-D4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="-305"/>
+            <point key="canvasLocation" x="1066" y="-280"/>
+        </scene>
+        <!--A View Controller-->
+        <scene sceneID="KBx-7w-BAo">
+            <objects>
+                <viewController id="pgt-au-YCt" customClass="aViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w3g-zU-FVM"/>
+                        <viewControllerLayoutGuide type="bottom" id="yKn-mP-jt1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="507-YU-TiE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiy-aX-9lD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="XBo-C5-Wnd"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="6S2-pM-mvQ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tHP-Ag-0dM">
+                                            <connections>
+                                                <action selector="backAction:" destination="pgt-au-YCt" id="fdm-Wv-3s3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uiy-aX-9lD" secondAttribute="trailing" id="eg9-ww-FeF"/>
+                            <constraint firstItem="uiy-aX-9lD" firstAttribute="leading" secondItem="507-YU-TiE" secondAttribute="leading" id="mIE-1p-JZm"/>
+                            <constraint firstItem="uiy-aX-9lD" firstAttribute="top" secondItem="507-YU-TiE" secondAttribute="top" id="yPw-Pp-UAu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nun-Hy-q1F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JjL-FQ-xDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="-280"/>
         </scene>
     </scenes>
 </document>

@@ -89,7 +89,11 @@
 - (void)tabbarViewItem:(UIView *)tabItem index:(NSInteger)index
 {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",index]];
+    if (0 == index) {
+        imageView.image = [UIImage imageNamed:@"home_f"];
+    }else{
+        imageView.image = [UIImage imageNamed:@"home"];
+    }
     [tabItem addSubview:imageView];
     
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -102,8 +106,12 @@
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     titleLabel.text = [NSString stringWithFormat:@"%ld0000",index];
     titleLabel.textAlignment = NSTextAlignmentCenter;
+    if (0 == index) {
+        titleLabel.textColor = [UIColor redColor];
+    }else{
+        titleLabel.textColor = [UIColor blackColor];
+    }
     titleLabel.font = [UIFont systemFontOfSize:15];
-    titleLabel.textColor = [UIColor redColor];
     [tabItem addSubview:titleLabel];
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabItem attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
@@ -111,6 +119,40 @@
     [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:44]];
     [tabItem addConstraint:[NSLayoutConstraint constraintWithItem:titleLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:15]];
     [tabItem updateConstraints];
+}
+
+- (void)tabbarViewAction:(tabbarView *)tabbar clickIndex:(NSInteger)index
+{
+    for (int i = 0; i < tabbar.count; i++) {
+        if (index == i) {
+            
+            UIView *view = [tabbar viewWithTag:1000 + index];
+            for (UIView *tmp in view.subviews) {
+                if ([tmp isKindOfClass:[UIImageView class]]) {
+                    UIImageView *tmpImage = (UIImageView *)tmp;
+                    [tmpImage setImage:[UIImage imageNamed:@"home_f"]];
+                }else{
+                    UILabel *label = (UILabel *)tmp;
+                    label.textColor = [UIColor redColor];
+                }
+            }
+        }else{
+            
+            UIView *view = [tabbar viewWithTag:1000 + i];
+            for (UIView *tmp in view.subviews) {
+                if ([tmp isKindOfClass:[UIImageView class]]) {
+                    UIImageView *tmpImage = (UIImageView *)tmp;
+                    [tmpImage setImage:[UIImage imageNamed:@"home"]];
+                }else{
+                    UILabel *label = (UILabel *)tmp;
+                    label.textColor = [UIColor blackColor];
+                }
+            }
+        }
+    }
+    
+    [self buttonClick:index];
+    
 }
 
 @end

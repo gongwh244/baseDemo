@@ -1,32 +1,26 @@
 //
-//  oneViewController.m
+//  aViewController.m
 //  baseDemo
 //
-//  Created by gongweiqiang on 15-3-17.
+//  Created by gongWeiqiang on 15/3/30.
 //  Copyright (c) 2015年 Holl. All rights reserved.
 //
 
-#import "oneViewController.h"
+#import "aViewController.h"
 
-@interface oneViewController ()
+@interface aViewController ()
 
 @end
 
-@implementation oneViewController
+@implementation aViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    NSLog(@"one will appear");
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    NSLog(@"one will disappear");
+- (IBAction)backAction:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2465F3621AC983CC00B035C6 /* aViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2465F3611AC983CC00B035C6 /* aViewController.m */; };
+		2465F3641AC983F800B035C6 /* one.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2465F3631AC983F800B035C6 /* one.storyboard */; };
 		248B796D1AB95AEF008BEE92 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B796C1AB95AEF008BEE92 /* scrollViewController.m */; };
 		248B79721AB95B0C008BEE92 /* tabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B796F1AB95B0C008BEE92 /* tabbarView.m */; };
 		248B79731AB95B0D008BEE92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79711AB95B0C008BEE92 /* ViewController.m */; };
 		248B797D1AB95B69008BEE92 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79761AB95B69008BEE92 /* oneViewController.m */; };
 		248B797E1AB95B69008BEE92 /* threeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B79791AB95B69008BEE92 /* threeViewController.m */; };
 		248B797F1AB95B69008BEE92 /* twoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248B797C1AB95B69008BEE92 /* twoViewController.m */; };
-		248B79841AB96426008BEE92 /* one.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79831AB96426008BEE92 /* one.storyboard */; };
-		248B79851AB96426008BEE92 /* one.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79831AB96426008BEE92 /* one.storyboard */; };
 		248B79871AB96646008BEE92 /* two.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79861AB96646008BEE92 /* two.storyboard */; };
 		248B79881AB96646008BEE92 /* two.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79861AB96646008BEE92 /* two.storyboard */; };
 		248B798A1AB9668D008BEE92 /* three.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248B79891AB9668D008BEE92 /* three.storyboard */; };
@@ -46,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2465F3601AC983CC00B035C6 /* aViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aViewController.h; sourceTree = "<group>"; };
+		2465F3611AC983CC00B035C6 /* aViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aViewController.m; sourceTree = "<group>"; };
+		2465F3631AC983F800B035C6 /* one.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = one.storyboard; sourceTree = "<group>"; };
 		248B796B1AB95AEF008BEE92 /* scrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollViewController.h; sourceTree = "<group>"; };
 		248B796C1AB95AEF008BEE92 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
 		248B796E1AB95B0C008BEE92 /* tabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabbarView.h; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		248B79791AB95B69008BEE92 /* threeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threeViewController.m; sourceTree = "<group>"; };
 		248B797B1AB95B69008BEE92 /* twoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoViewController.h; sourceTree = "<group>"; };
 		248B797C1AB95B69008BEE92 /* twoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoViewController.m; sourceTree = "<group>"; };
-		248B79831AB96426008BEE92 /* one.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = one.storyboard; sourceTree = "<group>"; };
 		248B79861AB96646008BEE92 /* two.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = two.storyboard; sourceTree = "<group>"; };
 		248B79891AB9668D008BEE92 /* three.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = three.storyboard; sourceTree = "<group>"; };
 		248B798C1AB97CCE008BEE92 /* home_f@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_f@2x.png"; sourceTree = "<group>"; };
@@ -136,7 +138,9 @@
 			children = (
 				248B79751AB95B69008BEE92 /* oneViewController.h */,
 				248B79761AB95B69008BEE92 /* oneViewController.m */,
-				248B79831AB96426008BEE92 /* one.storyboard */,
+				2465F3601AC983CC00B035C6 /* aViewController.h */,
+				2465F3611AC983CC00B035C6 /* aViewController.m */,
+				2465F3631AC983F800B035C6 /* one.storyboard */,
 			);
 			path = one;
 			sourceTree = "<group>";
@@ -322,8 +326,8 @@
 				24DF143D1AB8552D0040AA8C /* 3.jpg in Resources */,
 				248B798E1AB97CCE008BEE92 /* home_f@2x.png in Resources */,
 				24DF143B1AB8552D0040AA8C /* 1.jpg in Resources */,
-				248B79841AB96426008BEE92 /* one.storyboard in Resources */,
 				248B79871AB96646008BEE92 /* two.storyboard in Resources */,
+				2465F3641AC983F800B035C6 /* one.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +338,6 @@
 				248B79911AB97CCE008BEE92 /* home@2x.png in Resources */,
 				248B798F1AB97CCE008BEE92 /* home_f@2x.png in Resources */,
 				248B798B1AB9668D008BEE92 /* three.storyboard in Resources */,
-				248B79851AB96426008BEE92 /* one.storyboard in Resources */,
 				248B79881AB96646008BEE92 /* two.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +353,7 @@
 				248B796D1AB95AEF008BEE92 /* scrollViewController.m in Sources */,
 				248B797E1AB95B69008BEE92 /* threeViewController.m in Sources */,
 				248B79731AB95B0D008BEE92 /* ViewController.m in Sources */,
+				2465F3621AC983CC00B035C6 /* aViewController.m in Sources */,
 				24A20F651AB7FAFA00DF1D6B /* main.m in Sources */,
 				248B79721AB95B0C008BEE92 /* tabbarView.m in Sources */,
 				248B797D1AB95B69008BEE92 /* oneViewController.m in Sources */,

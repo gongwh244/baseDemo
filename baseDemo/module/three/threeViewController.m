@@ -19,6 +19,16 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"three will appear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    NSLog(@"three will disappear");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
